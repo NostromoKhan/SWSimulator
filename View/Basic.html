@@ -1,0 +1,20 @@
+<script type='text/javascript' src='../externals/knockout-3.4.2.js'></script>
+
+Name: <input type="text" data-bind= "value: name" />
+<p>
+    Hello, <span data-bind="text: name "></span>
+</p>
+<button>Change_Name</button>
+
+
+<script src='../ViewModel/BasicViewModel.js'></script>
+<!-- <script type='text/javascript'>
+    {
+        var viewModel = {
+            name: "Bob"
+        };
+        ko.applyBindings(viewModel);
+    }
+</script> -->
+
+
