@@ -1,13 +1,36 @@
 <script type='text/javascript' src='../externals/knockout-3.4.2.js'></script>
 
-Name: <input type="text" data-bind= "value: name" />
-<p>
-    Hello, <span data-bind="text: name "></span>
-</p>
-<button>Change_Name</button>
 
+<!-- Name: <input type="text" data-bind= "value: name, valueUpdate: 'afterkeydown'" />
+<input type="checkbox" data-bind="checked: nameVisible"/>
+<p>
+    Hello, <span data-bind="text: name, visible: nameVisible"></span>
+    <br/>
+    <span data-bind="text: displayName"></span>
+</p>
+<button data-bind="click: changeName">Change Name</button> -->
+
+
+<br/>
+<br/>
+<button data-bind="click: addItem">Add</button>
+<button data-bind="click: removeItem">Remove</button>
+<br/>
+<br/>
+
+<!-- <ul data-bind="foreach: list">
+    <li data-bind="text: name"></li>
+</ul> -->
+
+<ul>
+    <!-- ko foreach: list -->
+    <li data-bind="text: name"></li>
+    <!-- /ko -->
+</ul>
+    
 
 <script src='../ViewModel/BasicViewModel.js'></script>
+
 <!-- <script type='text/javascript'>
     {
         var viewModel = {
